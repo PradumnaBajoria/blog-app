@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const user = true;
   return (
     <div className="App">
       <Router>
@@ -22,16 +23,16 @@ function App() {
             <Home />
           </Route>
           <Route path="/login">
-            <Login />
+            {user ? <Home /> :<Login />}
           </Route>
           <Route path="/register">
-            <Register />
+            {user ? <Home /> :<Register />}
           </Route>
           <Route path="/settings">
-            <Settings />
+            {user ? <Settings /> :<Login />}
           </Route>
           <Route path="/write">
-            <Write />
+            {user ? <Write /> :<Login />}
           </Route>
           <Route path="/post/:postId">
             <Single />

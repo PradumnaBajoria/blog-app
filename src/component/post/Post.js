@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Post.css"
 
 function Post() {
@@ -15,7 +16,9 @@ function Post() {
                     <span className='postCat'>Music</span>
                 </div>
                 <span className='postTitle'>
-                    Hello There
+                    <Link className='link' to='/post/:postId'>
+                        Hello There
+                    </Link>
                 </span>
                 <hr />
                 <span className='postDate'>1 hour ago</span>
