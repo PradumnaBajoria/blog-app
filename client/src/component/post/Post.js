@@ -20,7 +20,7 @@ function Post({ post }) {
                     ))}
                 </div>
                 <span className='postTitle'>
-                    <Link className='link' to='/post/:postId'>
+                    <Link className='link' to={`/post/${post._id}`}>
                         {post.title}
                     </Link>
                 </span>
