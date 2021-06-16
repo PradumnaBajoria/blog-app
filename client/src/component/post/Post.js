@@ -2,40 +2,33 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Post.css"
 
-function Post() {
+function Post({ post }) {
     return (
         <div className='post'>
+            {post.photo && (
             <img
                 className='postImg'
                 alt='img'
-                src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg' 
+                src={post.photo}
+                //src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg' 
             />
+            )}
             <div className='postInfo'>
                 <div className='postCats'>
-                    <span className='postCat'>Anime</span>
-                    <span className='postCat'>Music</span>
+                    {post.categories.map(cat => (
+                        <span className='postCat'>{cat.name}</span>
+                    ))}
                 </div>
                 <span className='postTitle'>
                     <Link className='link' to='/post/:postId'>
-                        Hello There
+                        {post.title}
                     </Link>
                 </span>
                 <hr />
-                <span className='postDate'>1 hour ago</span>
+                <span className='postDate'>{new Date(post.createdAt).toDateString()}</span>
             </div>
             <p className='postDesc'>
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
-                How are you all doing, this is the first blog. hope you like it.
+                {post.desc}
             </p>
         </div>
     )
