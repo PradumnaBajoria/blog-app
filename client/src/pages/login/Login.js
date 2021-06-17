@@ -21,6 +21,7 @@ function Login() {
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data })
         }catch(err){
             dispatch({ type: "LOGIN_FALIURE" })
+            window.alert("invalid username or password")
         }
     }
 
