@@ -9,6 +9,8 @@ function SinglePost() {
     const location = useLocation()
     const path = location.pathname.split("/")[2]
     const [post, setPost] = useState([])
+    const PF = "http://localhost:5000/images/"
+
 
     useEffect(() => {
         const getPost = async () => {
@@ -25,7 +27,7 @@ function SinglePost() {
                     <img
                     className='singlePostImg'
                     alt='img'
-                    src={post.photo}
+                    src={PF + post.photo}
                     // src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg' 
                 />
                 )}

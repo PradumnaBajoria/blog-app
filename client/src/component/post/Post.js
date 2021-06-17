@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom'
 import "./Post.css"
 
 function Post({ post }) {
+
+    const PF = "http://localhost:5000/images/"
+
     return (
         <div className='post'>
             {post.photo && (
             <img
                 className='postImg'
                 alt='img'
-                src={post.photo}
+                src={PF + post.photo}
                 //src='https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg' 
             />
             )}
