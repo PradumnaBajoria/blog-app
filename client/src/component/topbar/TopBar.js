@@ -28,9 +28,9 @@ function TopBar() {
                     <li className='topListItem'>
                         <Link className='link' to='/'>ABOUT</Link>
                     </li>
-                    <li className='topListItem'>
+                    {/* <li className='topListItem'>
                         <Link className='link' to='/'>CONTACT</Link>
-                    </li>
+                    </li> */}
                     <li className='topListItem'>
                         <Link className='link' to='/write'>WRITE</Link>
                     </li>

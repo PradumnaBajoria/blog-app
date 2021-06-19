@@ -72,7 +72,7 @@ function Settings() {
                         />
                     </div>
                     <label>Username</label>
-                    <input type='text' placeholder={user.username} onChange={e => setUsername(e.target.value)} />
+                    <input type='text' placeholder={user.username} onChange={e => setUsername(e.target.value)} required />
                     <label>Email</label>
                     <input type='email' placeholder={user.email} disabled />
                     <label>Password</label>
